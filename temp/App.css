@@ -1,0 +1,19 @@
+.App {
+  color: orange;
+}
+
+.Panel {
+  height: 30em;
+  width: 35em;
+  background-color: lightgreen;
+}
+
+.Item {
+  height: 7em;
+  width: 7em;
+  border-radius: 50%;
+  background-color: green;
+
+  text-align: center;
+  line-height: 7em;
+}

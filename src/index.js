@@ -1,12 +1,18 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import ReactDom from 'react-dom';
+import './css/index.css';
+import store from './store';
+import { Provider } from 'react-redux';
+import App from './components/App.js';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+class ViewContainer extends React.Component {
+  render() {
+      return(
+            <Provider store={store}>
+                <App />
+            </Provider>
+      );
+  }
+}
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDom.render(<ViewContainer />, document.getElementById('root'));
